@@ -272,6 +272,7 @@ export default function Board() {
         </div>
       )}
       
+
       
       
       {!isLoading && (
