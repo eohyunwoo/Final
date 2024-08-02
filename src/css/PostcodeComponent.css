@@ -1,0 +1,38 @@
+.postcode-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 10px; /* 요소 간의 간격을 조정합니다 */
+}
+
+.postcode-input {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.address {
+  flex: 4; /* 30% */
+}
+
+.extra-address {
+  flex: 2; /* 20% */
+}
+
+.postcode-button {
+  flex: 1; /* 20% */
+  padding: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0px;
+  border-radius: 30px;
+}
+
+@media (max-width: 600px) {
+  .postcode-container {
+    flex-direction: column;
+  }
+  .address, .extra-address, .detail-address, .postcode-button {
+    width: 100%;
+  }
+}

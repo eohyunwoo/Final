@@ -1,0 +1,233 @@
+/* 기존 스타일 유지 */
+.btn_logout{
+  
+  background-color: #00FFA8;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+header {
+  color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white; /* 헤더 배경 색상을 흰색으로 설정 */
+  z-index: 1000;
+  padding: 10px 0; /* 헤더 높이 조정 */
+  transition: padding 0.3s ease, background-color 0.3s ease; /* 패딩과 배경색 전환에 대한 애니메이션 추가 */
+}
+
+.header_container {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 항목들을 양쪽 끝으로 배치 */
+  width: 100%;
+  max-width: 1200px; /* 원하는 최대 너비 설정 */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav {
+  margin-left: 20px; /* 로고와 메뉴 사이의 여백 줄이기 */
+  padding: 0;
+  display: flex;
+  align-items: center; /* 네비게이션 항목들을 중앙에 정렬 */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul > li {
+  font-size: 1em;
+  font-weight: bold;
+  height: 40px;
+  text-align: center;
+}
+
+nav a:link, nav a:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-size: 1em;
+  margin: 0 10px; /* 좌우 여백 줄이기 */
+  padding: 5px 0; /* 상하 여백 추가 */
+  position: relative; /* 상대적 위치 지정 */
+  line-height: 35px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #00ffa8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden; /* 초기에는 숨김 */
+}
+
+nav a:hover::before {
+  visibility: visible; /* 마우스를 올렸을 때 보임 */
+}
+
+/* 로고 */
+.logo {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+/* 로그인/회원가입 */
+.auth_buttons {
+  display: flex;
+  gap: 10px; /* 버튼 사이의 간격 */
+}
+
+.btn_login, .btn_register {
+  padding: 8px 15px; /* 패딩 조정 */
+  border: none;
+  border-radius: 50px;
+  font-size: 12px; /* 폰트 크기 조정 */
+  cursor: pointer; /* 커서 변경 */
+  display: inline-block; /* 인라인 블록으로 설정 */
+}
+
+/* 로그인 스타일 */
+.auth_buttons .btn_login {
+  border: 1px solid #d2d4d8;
+  text-decoration: none;
+  color: black;
+}
+
+.auth_buttons .btn_login:hover {
+  background-color: #f3f4f6;
+}
+
+/* 회원가입 스타일 */
+.auth_buttons .btn_register {
+  text-decoration: none;
+  color: black;
+  background-color: #00ffa8;
+}
+
+.auth_buttons .btn_register:hover {
+  background-color: #00d48c;
+}
+
+/* 문의하기 버튼 스타일 */
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-button:hover {
+  background-color: #45a049;
+}
+
+/* 팝업 스타일 */
+.popup {
+  position: fixed;
+  bottom: -100%;
+  right: 20px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1001;
+  width: 300px;
+  transition: bottom 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.popup-active {
+  bottom: 100px;
+  opacity: 1;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  header {
+    padding: 5px 0; /* 패딩을 줄여서 헤더 높이를 줄임 */
+    background-color: rgba(255, 255, 255, 0.8); /* 약간의 투명도 추가 */
+    pointer-events: none; /* 마우스 이벤트 비활성화 */
+  }
+  .header_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    pointer-events: auto; /* 헤더 내부 요소에 대한 마우스 이벤트 활성화 */
+  }
+
+  nav {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center; /* 메뉴 항목들을 중앙으로 배치 */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 메뉴 항목들을 중앙으로 배치 */
+  }
+
+  nav ul > li {
+    width: auto; /* 필요에 따라 너비 자동 조정 */
+    margin: 5px 0;
+    font-size: 1.1em; /* 글자 크기 키우기 */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  nav a:link, nav a:visited {
+    font-size: 1.5em; /* 글자 크기 키우기 */
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  .auth_buttons {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn_login, .btn_register {
+    font-size: 1.2em; /* 버튼 글자 크기 키우기 */
+    text-align: center; /* 중앙 정렬 */
+  }
+}
+
+/* 섹션 마진 조정 */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 250px; /* 헤더 높이만큼 마진 추가 */
+  }
+}

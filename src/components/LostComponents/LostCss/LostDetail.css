@@ -1,0 +1,44 @@
+.lost-detail {
+  padding: 20px;
+  border-radius: 10px;
+  width: 450px;
+  height: 790px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.lost-detail img {
+  max-width: 100%;
+  height: 200px; /* 이미지 높이 조정 */
+  width: auto;
+  object-fit: cover;
+  margin: 10px auto; /* 이미지 중앙 정렬 */
+  display: block;
+  border-radius: 10px;
+}
+
+.lost-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px; /* 텍스트 크기 조정 */
+}
+
+.lost-detail-table th, .lost-detail-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top; /* 상단 정렬로 내용 정리 */
+}
+
+.lost-detail-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  width: 150px; /* 열 너비 조정 */
+}
+
+.lost-detail-table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

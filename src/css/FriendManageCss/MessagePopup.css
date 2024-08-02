@@ -1,0 +1,148 @@
+.message-popup {
+    position: fixed;
+    bottom: 50px; /* 화면의 아래에서 50px 떨어진 위치 */
+    right: 50px; /* 화면의 오른쪽에서 50px 떨어진 위치 */
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px #00000033;
+    z-index: 10001; /* 최상위 레벨로 설정 */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 컨텐츠가 넘치지 않도록 설정 */
+    cursor: default; /* 기본 커서로 설정 */
+}
+
+.message-popup-resizer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #00000033;
+    cursor: ns-resize; /* 세로 크기 조절 커서 표시 */
+    border-top: 5px solid #00000033;
+}
+
+.message-popup-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: move; /* 드래그 가능 표시 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    user-select: none; /* 텍스트 선택 방지 */
+    position: relative; /* 자식 요소에 절대 위치를 설정하기 위해 */
+}
+
+.message-popup-header h2 {
+    margin: 0;
+    font-size: 16px; /* 기본 폰트 크기 */
+    line-height: 1.2; /* 줄 높이 */
+    overflow: hidden; /* 넘치는 내용 숨기기 */
+    text-overflow: ellipsis; /* 넘치는 내용 생략 기호 추가 */
+    white-space: nowrap; /* 텍스트 줄 바꿈 방지 */
+}
+
+.message-popup-close-btn {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px; /* 고정된 폰트 크기 */
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 4px 8px;
+    width: 80px; /* 버튼의 고정된 너비 */
+    text-align: center; /* 텍스트 정렬 */
+    line-height: 1; /* 버튼 높이 조정 */
+}
+
+.message-popup-close-btn:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+.message-popup-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.message-popup-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 기본 왼쪽 정렬 */
+}
+
+.message-popup-message {
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    position: relative;
+    max-width: 80%; /* 최대 너비 설정 */
+    word-wrap: break-word; /* 단어가 길어질 때 줄 바꿈 */
+}
+
+.message-sent {
+    align-self: flex-end; /* 오른쪽 정렬 */
+    background-color: #007bff;
+    color: #fff;
+    text-align: right; /* 오른쪽 정렬 */
+}
+
+.message-received {
+    align-self: flex-start; /* 왼쪽 정렬 */
+    background-color: #f1f1f1;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+.message-content {
+    word-break: break-word;
+}
+
+.message-time {
+    font-size: 12px; /* 대화시간의 글자 크기 */
+    color: #888; /* 대화시간의 색상 */
+    margin-top: 2px; /* 대화내용과 대화시간 사이의 간격 조정 */
+    text-align: right; /* 대화시간 오른쪽 정렬 */
+    width: 100%; /* 대화시간이 메시지 박스의 너비에 맞게 조정 */
+}
+
+.message-popup-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.message-popup-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.message-popup-footer button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.message-popup-footer button:hover {
+    background-color: #0056b3;
+}
+
+.message-popup-footer button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    color: #666;
+}

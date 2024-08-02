@@ -1,0 +1,25 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pageItem {
+    margin: 0 5px;
+}
+
+.pageLink {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.active .pageLink {
+    background-color: #00FFA8;
+    color: rgb(0, 0, 0);
+    border-color: #00FFA8;
+}

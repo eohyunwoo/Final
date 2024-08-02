@@ -1,0 +1,191 @@
+.login_container{
+    margin: 0 auto;
+    padding-bottom: 10px;
+    /* margin-top: 30px; */
+    width: 500px;
+    height: auto;
+    background-color: white;
+    /* border: 1px solid #e5e5e5; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 회색 그림자 추가 */    
+}
+
+.login_container_form{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    /* align-items: center; */
+}
+
+/* ================== 로고 ================== */
+.login_logo{
+    height: 80px;
+}  
+.logo_link{
+    margin-top: 30px;
+    margin-left: 160px;
+    display: inline-block;
+    width: fit-content;
+}
+/* ================== 로고 ================== */
+
+
+/* ================== sns 로그인 ================== */
+.sns_login{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.btn_kakao, .btn_naver{
+    padding: 4px 15px; /* 패딩 조정 */
+    border: none;
+    width: 40%;
+    border-radius: 10px;
+    font-size: 19px; /* 폰트 크기 조정 */
+    font-weight: bold;
+    cursor: pointer; /* 커서 변경 */
+    display: inline-block; /* 인라인 블록으로 설정 */
+  }
+  
+  
+  /* 로그인 스타일 */
+  .btn_kakao {
+    
+    text-decoration: none;
+    color: black;
+    background-color: #fae300;
+  
+  }
+  
+  .btn_kakao:hover {
+    text-decoration: none;
+    background-color: #ebd500; 
+  }
+  
+  
+  
+  /* 회원가입 스타일 */
+  .btn_naver {
+    text-decoration: none;
+    color: white;
+    background-color: #03c75a;
+  
+  }
+  
+  .btn_naver:hover{
+    text-decoration: none;
+    background-color: #09aa5c; 
+  }
+
+
+
+
+/* ================== sns 로그인 ================== */
+
+
+/* ================== 일반 로그인 ================== */
+.form_group{
+    font-size: 0.8em;
+    width: 100%;
+    display: flex;
+    text-align: start;
+    flex-flow: column wrap;
+}
+
+.login_input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #d2d4d8;
+    padding-left: 10px;
+    height: 30px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+.btn_login_submit{
+    color: white;
+    border-radius: 5px;
+    background-color: #0090f9;
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    height: 34px;
+}
+
+.btn_login_submit:hover{
+    background-color: #0b7fd3;
+}
+
+.noregister{
+    font-size: 0.8em;
+}
+
+/* ================== 일반 로그인 ================== */
+
+
+
+/* ================== 소개 ================== */
+.intro_1{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.intro_2{
+    margin-top: 7px;
+    font-size: 0.8em;
+}
+/* ================== 소개 ================== */
+
+
+
+
+/* ================== 글 양옆에 선 ================== */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #d2d4d8;
+}
+
+.separator-text {
+    padding: 0 10px; /* 텍스트와 선 사이 간격 */
+    font-size: 0.8em; /* 텍스트 크기 */
+    color: #6b7280; /* 텍스트 색상 */
+}
+
+
+/* ================== 글 양옆에 선 ================== */
+
+
+/* ===== 로그인 실패 ===== */
+.error_message{
+    padding-top: 15px;
+    font-weight: bold;
+    color: red;
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+.newsContainer {
+    padding: 20px;
+}
+
+.tabMenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.tabButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.active {
+    background-color: #00FFA8;
+    color: rgb(0, 0, 0);
+}
+
+.newsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 960px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.newsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    max-width: 300px;
+    height: 340px; /* 고정 높이 설정 */
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.newsCard:hover {
+    transform: scale(1.05);
+}
+
+.newsImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.newsContent {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.newsTitle {
+    font-size: 18px;
+    margin: 0 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.newsDescription {
+    font-size: 14px;
+    margin: 0 0 5px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* 최대 5줄로 제한 */
+    -webkit-box-orient: vertical;
+    line-height: 1.5em; /* 줄 간격 조정 */
+    max-height: 7.5em; /* 최대 높이 설정 (줄 수에 따라) */
+}
+
+.newsLink {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto; /* '기사 보기' 링크를 아래로 정렬 */
+}

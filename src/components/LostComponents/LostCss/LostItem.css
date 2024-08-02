@@ -1,0 +1,29 @@
+.lost-item {
+  background-color: #fff;
+ /*  border: 1px solid #ddd; */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-align: center;
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 200px;
+  height: 405px;
+}
+
+.lost-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.lost-item-info {
+  margin-top: 10px;
+}

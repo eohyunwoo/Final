@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F0FCF8;
+  overflow-x: hidden;
+  height: 3000px;
+}
+
+.container {
+
+  width: 1250px;
+  margin: 0 auto;
+  margin-top: 150px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-flow: column wrap;
+  gap: 50px;
+  position: relative;
+}
+
+
+/* ====================================== */
+
+.section1{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 0 auto;
+  height: 700px;
+}
+
+.section1_div1 {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 66%;
+  
+  padding-top: 30px;
+  padding-bottom: 50px;
+  /* align-items: center; */
+  /* text-align: center; */
+  display: flex;
+  flex-flow: column;
+  /* justify-content: space-between; */
+}
+
+
+.section1_div1_image{
+  width: 100%;
+  padding-bottom: 20px;
+  /* border-bottom: 1px solid black; */
+}
+.section1_div1 p{
+  margin-left: 40px;
+}
+
+.section1_div1_h{
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.section1_div1_p{
+  margin: 15px 0px;
+  line-height: 25px;
+}
+
+
+.section1_div2{
+  width: 390px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.section1_div2_div{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* padding: 20px; */
+  width: 100%;
+  height: 29.5%;
+  /* height: 500px; */
+  align-items: center;
+  text-align: center;
+  
+}
+
+
+
+/* ====================================== */
+
+
+.section2{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 0 auto;
+  height: 400px;
+}
+
+.section2_div1, .section2_div2{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 48.4%;
+  display: flex;
+  flex-flow: column;
+}
+
+
+.section3{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 0 auto;
+  height: 300px;
+}
+
+.section3_div1{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+
+}
+
+
+
+/* 기본 스타일 설정 */
+.section1_div1, 
+.section1_div2_div, 
+.section2_div1, 
+.section2_div2, 
+.section3_div1 {
+  transition: box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+/* hover 상태일 때의 애니메이션 */
+.section1_div1:hover, 
+.section1_div2_div:hover, 
+.section2_div1:hover, 
+.section2_div2:hover, 
+.section3_div1:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}

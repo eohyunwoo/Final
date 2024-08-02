@@ -1,0 +1,230 @@
+/* 전체 컨테이너 스타일 */
+.friend-manage-container {
+  position: fixed;
+  right: 0;
+  top: 76px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  height: calc(100vh - 76px);
+  width: 400px;
+  z-index: 1000;
+  overflow-y: hidden; /* 컨테이너 자체는 스크롤이 되지 않도록 설정 */
+}
+
+/* 제목 스타일 */
+.friend-manage-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 로딩 텍스트 스타일 */
+.friend-manage-loading {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+/* 친구 요청 섹션 스타일 */
+.friend-manage-requests {
+  margin-bottom: 20px;
+}
+
+.friend-manage-requests-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.friend-manage-requests-list {
+  list-style-type: none;
+  padding: 0;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.friend-manage-request-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.friend-manage-request-details {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.friend-manage-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.friend-manage-nickname {
+  flex: 1;
+}
+
+.friend-manage-accept-btn,
+.friend-manage-decline-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.friend-manage-accept-btn {
+  background-color: #00ff2f;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.friend-manage-accept-btn:hover {
+  background-color: #00e03c;
+}
+
+.friend-manage-decline-btn {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.friend-manage-decline-btn:hover {
+  background-color: #e60000;
+}
+
+.friend-manage-no-requests,
+.friend-manage-no-friends {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+/* 친구 목록 섹션 스타일 */
+.friend-manage-friends {
+  margin-bottom: 20px;
+}
+
+.friend-manage-friends-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.friend-manage-friends-list {
+  list-style-type: none;
+  padding: 0;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.friend-manage-friend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.friend-manage-nickname {
+  font-weight: bold;
+}
+
+.friend-manage-friend-since {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.friend-manage-message-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.friend-manage-message-btn:hover {
+  background-color: #0056b3;
+}
+
+.friend-manage-delete-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.friend-manage-delete-btn:hover {
+  background-color: #ff4757;
+}
+
+/* 닫기 버튼 스타일 */
+.friend-manage-close-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.friend-manage-close-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 상태 점 스타일 */
+.friend-manage-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+}
+
+.friend-manage-status::after {
+  content: attr(data-status);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.friend-manage-status:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
