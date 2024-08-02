@@ -273,6 +273,7 @@ export default function Board() {
       )}
       
       
+      
       {!isLoading && (
         <div className={styles.writeButtonContainer}>
           <button className={styles.writeButton} onClick={handleWriteButtonClick}>
